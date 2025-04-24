@@ -4,7 +4,7 @@ O módulo de Configurações de Segurança do NeurotrackApp permite aos usuário
 
 ## Diagrama de Fluxo
 
-![Configurações de Segurança](../assets/images/configuracoes_seguranca_consolidado.png)
+![Configurações de Segurança](/assets/images/configuracoes_seguranca_consolidado.png)
 
 ## Principais Funcionalidades
 

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações de Segurança - NeurotrackApp Wiki</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>NeurotrackApp Wiki</h1>
+      <p>Documentação completa do NeurotrackApp - Organizando o caos com inteligência e empatia</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/casos-uso/index.html">Casos de Uso</a></li>
+        <li><a href="/arquitetura/index.html">Arquitetura</a></li>
+        <li><a href="/api/index.html">API</a></li>
+        <li><a href="/codigo/index.html">Código</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Configurações de Segurança</h1>
+
+    <p>O módulo de Configurações de Segurança do NeurotrackApp permite o gerenciamento de autenticação, privacidade e dados pessoais, garantindo proteção e controle para usuários neurodivergentes.</p>
+
+    <h2>Diagrama de Fluxo</h2>
+
+    <img src="/assets/images/configuracoes_seguranca_consolidado.png" alt="Configurações de Segurança">
+
+    <h2>Principais Funcionalidades</h2>
+
+    <h3>Autenticação e Acesso</h3>
+    <ul>
+      <li><strong>Gerenciamento de senhas</strong>: Alteração e recuperação de credenciais</li>
+      <li><strong>Autenticação de dois fatores</strong>: Configuração de verificação adicional</li>
+      <li><strong>Biometria</strong>: Configuração de acesso por impressão digital ou reconhecimento facial</li>
+      <li><strong>Histórico de login</strong>: Visualização de acessos recentes</li>
+    </ul>
+
+    <h3>Privacidade e Compartilhamento</h3>
+    <ul>
+      <li><strong>Controle de dados</strong>: Configuração de quais dados são coletados</li>
+      <li><strong>Compartilhamento</strong>: Gerenciamento de permissões para profissionais e cuidadores</li>
+      <li><strong>Exportação de dados</strong>: Obtenção de cópia dos dados pessoais</li>
+    </ul>
+
+    <h3>Segurança de Conta</h3>
+    <ul>
+      <li><strong>Dispositivos conectados</strong>: Gerenciamento de dispositivos autorizados</li>
+      <li><strong>Notificações de segurança</strong>: Alertas sobre atividades suspeitas</li>
+      <li><strong>Exclusão de conta</strong>: Processo para remoção de dados</li>
+    </ul>
+
+    <h2>Endpoints da API</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Método</th>
+          <th>Endpoint</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GET</td>
+          <td>/security/settings</td>
+          <td>Obter configurações de segurança</td>
+        </tr>
+        <tr>
+          <td>PUT</td>
+          <td>/security/settings</td>
+          <td>Atualizar configurações de segurança</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>/security/2fa/enable</td>
+          <td>Ativar autenticação de dois fatores</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>/security/2fa/disable</td>
+          <td>Desativar autenticação de dois fatores</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/security/devices</td>
+          <td>Listar dispositivos conectados</td>
+        </tr>
+        <tr>
+          <td>DELETE</td>
+          <td>/security/devices/{id}</td>
+          <td>Revogar acesso de dispositivo</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/security/login-history</td>
+          <td>Obter histórico de login</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>/security/data-export</td>
+          <td>Solicitar exportação de dados</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Cenários de Uso</h2>
+
+    <h3>Configuração de Autenticação de Dois Fatores</h3>
+    <ol>
+      <li>Usuário acessa configurações de segurança</li>
+      <li>Seleciona opção de ativar autenticação de dois fatores</li>
+      <li>Escolhe método preferido (SMS, e-mail, aplicativo autenticador)</li>
+      <li>Configura e verifica o segundo fator</li>
+      <li>Recebe códigos de backup para emergências</li>
+    </ol>
+
+    <h3>Gerenciamento de Compartilhamento</h3>
+    <ol>
+      <li>Usuário acessa configurações de privacidade</li>
+      <li>Adiciona profissional de saúde como contato autorizado</li>
+      <li>Configura quais dados podem ser compartilhados</li>
+      <li>Define período de acesso</li>
+      <li>Gera link de compartilhamento ou convite</li>
+    </ol>
+
+    <h3>Exportação de Dados Pessoais</h3>
+    <ol>
+      <li>Usuário solicita exportação de dados</li>
+      <li>Seleciona categorias de dados a incluir</li>
+      <li>Escolhe formato de exportação</li>
+      <li>Confirma identidade via senha ou segundo fator</li>
+      <li>Recebe arquivo com dados pessoais</li>
+    </ol>
+
+    <p><a href="/casos-uso/index.html">Voltar para Casos de Uso</a></p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>NeurotrackApp - Organizando o caos com inteligência e empatia</p>
+      <p>Desenvolvido por Alan Gomes da Silva</p>
+    </div>
+  </footer>
+</body>
+</html>

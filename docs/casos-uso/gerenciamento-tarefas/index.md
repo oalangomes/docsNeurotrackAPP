@@ -4,7 +4,7 @@ O módulo de Gerenciamento de Tarefas do NeurotrackApp foi desenvolvido especial
 
 ## Diagrama de Fluxo
 
-![Gerenciamento de Tarefas](../assets/images/gerenciamento_tarefas_consolidado.png)
+![Gerenciamento de Tarefas](/assets/images/gerenciamento_tarefas_consolidado.png)
 
 ## Principais Funcionalidades
 

@@ -4,7 +4,7 @@ O módulo de Resumo e Home do NeurotrackApp serve como ponto central de acesso a
 
 ## Diagrama de Fluxo
 
-![Resumo e Home](../assets/images/resumo_home_consolidado.png)
+![Resumo e Home](/assets/images/resumo_home_consolidado.png)
 
 ## Principais Funcionalidades
 
