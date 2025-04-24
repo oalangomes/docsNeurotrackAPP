@@ -4,7 +4,7 @@ O módulo de Inteligência Artificial do NeurotrackApp oferece assistência pers
 
 ## Diagrama de Fluxo
 
-![Inteligência Artificial](../assets/images/inteligencia_artificial_consolidado.png)
+![Inteligência Artificial](/assets/images/inteligencia_artificial_consolidado.png)
 
 ## Principais Funcionalidades
 

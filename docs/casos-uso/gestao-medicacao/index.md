@@ -4,7 +4,7 @@ O módulo de Gestão de Medicação do NeurotrackApp permite aos usuários geren
 
 ## Diagrama de Fluxo
 
-![Gestão de Medicação](../assets/images/gestao_medicacao_consolidado.png)
+![Gestão de Medicação](/assets/images/gestao_medicacao_consolidado.png)
 
 ## Principais Funcionalidades
 

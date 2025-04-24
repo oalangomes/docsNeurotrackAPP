@@ -4,7 +4,7 @@ O módulo de Preferências Avançadas do NeurotrackApp permite uma personalizaç
 
 ## Diagrama de Fluxo
 
-![Preferências Avançadas](../assets/images/preferencias_avancadas_consolidado.png)
+![Preferências Avançadas](/assets/images/preferencias_avancadas_consolidado.png)
 
 ## Principais Funcionalidades
 

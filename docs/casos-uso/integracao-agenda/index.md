@@ -4,7 +4,7 @@ O módulo de Integração com Agenda do NeurotrackApp permite aos usuários gere
 
 ## Diagrama de Fluxo
 
-![Integração com Agenda](../assets/images/integracao_agenda_consolidado.png)
+![Integração com Agenda](/assets/images/integracao_agenda_consolidado.png)
 
 ## Principais Funcionalidades
 

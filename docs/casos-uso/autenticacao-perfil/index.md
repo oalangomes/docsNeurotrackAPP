@@ -4,7 +4,7 @@ O módulo de Autenticação e Perfil do NeurotrackApp gerencia todo o processo d
 
 ## Diagrama de Fluxo
 
-![Autenticação e Perfil](../assets/images/autenticacao_perfil_consolidado.png)
+![Autenticação e Perfil/assets/images/autenticacao_perfil_consolidado.png)
 
 ## Principais Funcionalidades
 

@@ -4,7 +4,7 @@ O módulo de Análises e Relatórios do NeurotrackApp oferece visualizações de
 
 ## Diagrama de Fluxo
 
-![Análises e Relatórios](../assets/images/analises_relatorios_consolidado.png)
+![Análises e Relatórios](/assets/images/analises_relatorios_consolidado.png)
 
 ## Principais Funcionalidades
 

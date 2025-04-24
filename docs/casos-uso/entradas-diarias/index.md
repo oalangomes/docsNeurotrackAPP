@@ -4,7 +4,7 @@ O módulo de Entradas Diárias do NeurotrackApp permite aos usuários registrar 
 
 ## Diagrama de Fluxo
 
-![Entradas Diárias](../assets/images/entradas_diarias_consolidado.png)
+![Entradas Diárias](/assets/images/entradas_diarias_consolidado.png)
 
 ## Principais Funcionalidades
 
