@@ -12,22 +12,6 @@ Ele aprende com o usuário e oferece suporte com:
 - Divisão de tarefas em etapas menores
 - Linha do tempo de evolução
 
-## 📚 Documentação Wiki
-A documentação completa do NeurotrackApp está disponível em nossa [Wiki](https://github.com/pages/neurotrackapp/docs), que inclui:
-
-- **Casos de Uso**: Fluxos detalhados de todas as funcionalidades
-- **Arquitetura**: Diagramas C4 e descrições técnicas
-- **API**: Documentação completa de endpoints e modelos
-- **Código**: Guias de implementação e estrutura do projeto
-
-Para acessar a Wiki, visite: `https://[seu-usuario].github.io/neurotrackapp/`
-
-### Como Contribuir com a Documentação
-1. Clone o repositório
-2. Navegue até a pasta `/docs`
-3. Faça suas alterações seguindo a estrutura existente
-4. Envie um pull request com suas contribuições
-
 ## 🔧 Tecnologias
 - Backend: Node.js
 - Frontend: React Native (em desenvolvimento)
@@ -42,12 +26,14 @@ Para acessar a Wiki, visite: `https://[seu-usuario].github.io/neurotrackapp/`
 neurotrackapp/
 ├── README.md
 ├── PITCH.md
-├── docs/               # Documentação Wiki (GitHub Pages)
-├── src/                # Código-fonte
-│   ├── backend/        # API Node.js
-│   └── frontend/       # Aplicativo React Native
-├── diagrams/           # Diagramas de arquitetura e fluxos
-└── postman/            # Coleções para testes de API
+├── docs/
+│   ├── NeurotrackApp_Documentacao_Completa_Com_Diagrama.pdf
+│   ├── NeurotrackApp_CasosDeUso_Fluxograma.pptx
+│   └── NeurotrackApp_PitchDeck.pdf
+├── diagrams/
+│   └── flowchart_uses_cases.png
+├── postman/
+│   └── NeurotrackApp_TestCases.postman_collection.json
 ```
 
 ## 🧪 Casos de Uso e Testes
