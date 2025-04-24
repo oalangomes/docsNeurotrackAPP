@@ -45,21 +45,37 @@ Para acessar a Wiki, visite: [NeurotrackApp Wiki](https://github.com/seu-usuario
 ## 📦 Estrutura do Projeto
 
 ```
-neurotrackapp/
-├── README.md           # Documentação principal
-├── PITCH.md            # Resumo do projeto para stakeholders
-├── docs/               # Documentação Wiki (GitHub Pages)
-├── src/                # Código-fonte
-│   ├── backend/        # API Node.js
-│   └── frontend/       # Aplicativo React Native
-├── diagrams/           # Diagramas de arquitetura e fluxos
-└── postman/            # Coleções para testes de API
+docsNeurotrackAPP/
+├── _layouts/           # Layouts para páginas da documentação
+├── api/                # Documentação de endpoints da API
+├── arquitetura/        # Diagramas e descrições da arquitetura do sistema
+├── assets/             # Recursos visuais (imagens, ícones, etc.)
+├── casos-uso/          # Casos de uso detalhados
+├── codigo/             # Guias e exemplos de código
+├── Documents/          # Documentos adicionais relacionados ao projeto
+├── _config.yml         # Configuração do site (Jekyll)
+├── .gitignore          # Arquivos ignorados pelo Git
+├── 404.md              # Página de erro 404 personalizada
+├── Gemfile             # Dependências para o Jekyll
+├── index.html          # Página inicial do site
+├── index.md            # Página inicial em Markdown
+└── README.md           # Documentação principal do repositório
 ```
 
-- **docs/**: Contém a documentação detalhada do projeto.
-- **src/**: Código-fonte do backend e frontend.
-- **diagrams/**: Diagramas para ilustrar a arquitetura e os fluxos do sistema.
-- **postman/**: Arquivos para facilitar testes de API com o Postman.
+### Descrição das Pastas e Arquivos
+- **_layouts/**: Contém os layouts usados para estruturar as páginas da documentação.
+- **api/**: Documentação detalhada dos endpoints da API, incluindo exemplos de requisições e respostas.
+- **arquitetura/**: Diagramas e descrições técnicas da arquitetura do sistema.
+- **assets/**: Recursos visuais, como imagens e ícones, utilizados na documentação.
+- **casos-uso/**: Casos de uso detalhados, explicando fluxos e funcionalidades do sistema.
+- **codigo/**: Guias de implementação e exemplos de código para desenvolvedores.
+- **Documents/**: Documentos adicionais relacionados ao projeto.
+- **_config.yml**: Arquivo de configuração para o Jekyll, usado para gerar o site da documentação.
+- **404.md**: Página personalizada para erros 404.
+- **Gemfile**: Lista de dependências para o Jekyll.
+- **index.html**: Página inicial do site gerado.
+- **index.md**: Página inicial em formato Markdown.
+- **README.md**: Documento principal com informações gerais sobre o repositório.
 
 ## 🚀 Instalação e Configuração
 
