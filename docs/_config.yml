@@ -1,6 +1,6 @@
 title: NeurotrackApp Wiki
 description: Documentação completa do NeurotrackApp - Organizando o caos com inteligência e empatia
-baseurl: ""
+baseurl: "/docsNeurotrackAPP"
 url: ""
 theme: jekyll-theme-cayman
 markdown: kramdown
