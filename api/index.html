@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API - NeurotrackApp Wiki</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>NeurotrackApp Wiki</h1>
+      <p>Documentação completa do NeurotrackApp - Organizando o caos com inteligência e empatia</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/casos-uso/index.html">Casos de Uso</a></li>
+        <li><a href="/arquitetura/index.html">Arquitetura</a></li>
+        <li><a href="/api/index.html">API</a></li>
+        <li><a href="/codigo/index.html">Código</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Documentação da API do NeurotrackApp</h1>
+
+    <p>Esta seção contém a documentação detalhada da API do NeurotrackApp, incluindo endpoints, parâmetros, respostas e exemplos de uso.</p>
+
+    <h2>Visão Geral da API</h2>
+    
+    <p>A API do NeurotrackApp segue os princípios REST e utiliza JSON para comunicação. Todos os endpoints requerem autenticação via token JWT, exceto os endpoints de autenticação.</p>
+    
+    <h2>Base URL</h2>
+    <p><code>https://api.neurotrackapp.com/v1</code></p>
+    
+    <h2>Autenticação</h2>
+    
+    <p>A autenticação é realizada através de tokens JWT. Para obter um token, utilize o endpoint <code>/auth/login</code>.</p>
+    
+    <h3>Exemplo de Requisição</h3>
+    <pre><code>
+POST /auth/login
+Content-Type: application/json
+
+{
+  "email": "usuario@exemplo.com",
+  "password": "senha123"
+}
+    </code></pre>
+    
+    <h3>Exemplo de Resposta</h3>
+    <pre><code>
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "expiresIn": 3600
+}
+    </code></pre>
+    
+    <h2>Endpoints Principais</h2>
+    
+    <h3>Autenticação</h3>
+    <ul>
+      <li><code>POST /auth/register</code> - Cadastro de novo usuário</li>
+      <li><code>POST /auth/login</code> - Autenticação de usuário</li>
+      <li><code>POST /auth/google-login</code> - Login com Google</li>
+      <li><code>POST /auth/logout</code> - Logout de usuário</li>
+    </ul>
+    
+    <h3>Usuários</h3>
+    <ul>
+      <li><code>GET /users/profile</code> - Obter perfil do usuário</li>
+      <li><code>PUT /users/profile</code> - Atualizar perfil do usuário</li>
+      <li><code>PUT /users/neuro-profile</code> - Atualizar perfil neurodivergente</li>
+      <li><code>PUT /users/preferences</code> - Atualizar preferências</li>
+    </ul>
+    
+    <h3>Entradas Diárias</h3>
+    <ul>
+      <li><code>GET /dailyentries</code> - Listar entradas diárias</li>
+      <li><code>POST /dailyentries</code> - Criar nova entrada</li>
+      <li><code>GET /dailyentries/{id}</code> - Obter entrada específica</li>
+      <li><code>PUT /dailyentries/{id}</code> - Atualizar entrada</li>
+      <li><code>DELETE /dailyentries/{id}</code> - Excluir entrada</li>
+    </ul>
+    
+    <h3>Tarefas</h3>
+    <ul>
+      <li><code>GET /tasks</code> - Listar tarefas</li>
+      <li><code>POST /tasks</code> - Criar nova tarefa</li>
+      <li><code>GET /tasks/{id}</code> - Obter tarefa específica</li>
+      <li><code>PATCH /tasks/{id}</code> - Atualizar tarefa</li>
+      <li><code>DELETE /tasks/{id}</code> - Excluir tarefa</li>
+    </ul>
+    
+    <h3>Medicações</h3>
+    <ul>
+      <li><code>GET /medications</code> - Listar medicações</li>
+      <li><code>POST /medications</code> - Adicionar nova medicação</li>
+      <li><code>GET /medications/{id}</code> - Obter medicação específica</li>
+      <li><code>PUT /medications/{id}</code> - Atualizar medicação</li>
+      <li><code>DELETE /medications/{id}</code> - Excluir medicação</li>
+      <li><code>POST /medications/{id}/log</code> - Registrar uso de medicação</li>
+    </ul>
+    
+    <h3>Agenda</h3>
+    <ul>
+      <li><code>GET /agenda</code> - Listar eventos da agenda</li>
+      <li><code>POST /agenda</code> - Adicionar novo evento</li>
+      <li><code>GET /agenda/{id}</code> - Obter evento específico</li>
+      <li><code>PUT /agenda/{id}</code> - Atualizar evento</li>
+      <li><code>DELETE /agenda/{id}</code> - Excluir evento</li>
+      <li><code>POST /agenda/sync</code> - Sincronizar com Google Calendar</li>
+    </ul>
+    
+    <h3>Inteligência Artificial</h3>
+    <ul>
+      <li><code>POST /ai/generate-response</code> - Interagir com assistente IA</li>
+      <li><code>POST /ai/summarize-tasks</code> - Obter resumo de tarefas via IA</li>
+    </ul>
+    
+    <h3>Saúde da API</h3>
+    <ul>
+      <li><code>GET /health</code> - Verificar status da API</li>
+    </ul>
+    
+    <h2>Documentação Swagger</h2>
+    
+    <p>A documentação completa da API está disponível no formato Swagger. Você pode acessar a interface interativa do Swagger em:</p>
+    
+    <p><a href="/api/swagger-ui.html" class="btn">Acessar Swagger UI</a></p>
+    
+    <p>Ou baixar a especificação OpenAPI em formato JSON:</p>
+    
+    <p><a href="/api/swagger.json" class="btn">Baixar Swagger JSON</a></p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>NeurotrackApp - Organizando o caos com inteligência e empatia</p>
+      <p>Desenvolvido por Alan Gomes da Silva</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Código - NeurotrackApp Wiki</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>NeurotrackApp Wiki</h1>
+      <p>Documentação completa do NeurotrackApp - Organizando o caos com inteligência e empatia</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/casos-uso/index.html">Casos de Uso</a></li>
+        <li><a href="/arquitetura/index.html">Arquitetura</a></li>
+        <li><a href="/api/index.html">API</a></li>
+        <li><a href="/codigo/index.html">Código</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Código e Implementação do NeurotrackApp</h1>
+
+    <p>Esta seção contém a documentação detalhada do código e implementação do NeurotrackApp, incluindo estrutura de projeto, padrões de codificação e exemplos.</p>
+
+    <h2>Estrutura do Projeto</h2>
+    
+    <h3>Backend (Node.js)</h3>
+    <pre><code>
+/backend
+  /src
+    /api
+      /controllers
+      /middlewares
+      /routes
+      /validators
+    /config
+    /models
+    /services
+    /utils
+    /ai
+    app.js
+    server.js
+  /tests
+  package.json
+  .env.example
+    </code></pre>
+    
+    <h3>Frontend (React Native)</h3>
+    <pre><code>
+/frontend
+  /src
+    /assets
+    /components
+    /contexts
+    /hooks
+    /navigation
+    /screens
+    /services
+    /styles
+    /utils
+    App.js
+  package.json
+    </code></pre>
+    
+    <h2>Padrões de Codificação</h2>
+    
+    <p>O NeurotrackApp segue os seguintes padrões de codificação:</p>
+    
+    <ul>
+      <li><strong>Backend</strong>: Clean Architecture com separação clara entre controllers, services e models</li>
+      <li><strong>Frontend</strong>: Componentes funcionais com hooks e context API</li>
+      <li><strong>Estilo de código</strong>: ESLint com configuração Airbnb</li>
+      <li><strong>Testes</strong>: Jest para testes unitários e de integração</li>
+      <li><strong>Documentação</strong>: JSDoc para documentação de código</li>
+    </ul>
+    
+    <h2>Exemplos de Código</h2>
+    
+    <h3>Controller de Tarefas</h3>
+    <pre><code>
+// TaskController.js
+const TaskService = require('../services/TaskService');
+
+class TaskController {
+  async create(req, res) {
+    try {
+      const { userId } = req.user;
+      const taskData = req.body;
+      
+      const task = await TaskService.createTask(userId, taskData);
+      
+      return res.status(201).json(task);
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
+    }
+  }
+  
+  async breakdown(req, res) {
+    try {
+      const { userId } = req.user;
+      const { id } = req.params;
+      const { subtasks } = req.body;
+      
+      const result = await TaskService.breakdownTask(userId, id, subtasks);
+      
+      return res.status(200).json(result);
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
+    }
+  }
+}
+
+module.exports = new TaskController();
+    </code></pre>
+    
+    <h3>Componente React Native</h3>
+    <pre><code>
+// TaskCard.js
+import React from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { useTheme } from '../contexts/ThemeContext';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
+const TaskCard = ({ task, onComplete, onEdit }) => {
+  const { colors } = useTheme();
+  
+  return (
+    &lt;View style={[styles.container, { borderColor: colors.border }]}&gt;
+      &lt;TouchableOpacity 
+        style={[styles.checkbox, task.completed && { backgroundColor: colors.primary }]}
+        onPress={() => onComplete(task.id)}
+      &gt;
+        {task.completed && &lt;Icon name="check" size={16} color="#fff" /&gt;}
+      &lt;/TouchableOpacity&gt;
+      
+      &lt;View style={styles.content}&gt;
+        &lt;Text style={[styles.title, task.completed && styles.completedText]}&gt;
+          {task.title}
+        &lt;/Text&gt;
+        {task.description && (
+          &lt;Text style={styles.description}&gt;{task.description}&lt;/Text&gt;
+        )}
+        {task.dueDate && (
+          &lt;Text style={styles.dueDate}&gt;Vencimento: {new Date(task.dueDate).toLocaleDateString()}&lt;/Text&gt;
+        )}
+      &lt;/View&gt;
+      
+      &lt;TouchableOpacity onPress={() => onEdit(task)}&gt;
+        &lt;Icon name="edit" size={20} color={colors.text} /&gt;
+      &lt;/TouchableOpacity&gt;
+    &lt;/View&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 15,
+    borderWidth: 1,
+    borderRadius: 8,
+    marginBottom: 10,
+  },
+  checkbox: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: '#666',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 10,
+  },
+  content: {
+    flex: 1,
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  completedText: {
+    textDecorationLine: 'line-through',
+    opacity: 0.7,
+  },
+  description: {
+    fontSize: 14,
+    color: '#666',
+    marginTop: 4,
+  },
+  dueDate: {
+    fontSize: 12,
+    color: '#888',
+    marginTop: 4,
+  },
+});
+
+export default TaskCard;
+    </code></pre>
+    
+    <h2>Integração com IA</h2>
+    
+    <p>O NeurotrackApp utiliza a API da OpenAI para fornecer assistência personalizada. Abaixo está um exemplo de como a integração é implementada:</p>
+    
+    <pre><code>
+// AIService.js
+const { Configuration, OpenAIApi } = require('openai');
+const config = require('../config');
+
+class AIService {
+  constructor() {
+    this.configuration = new Configuration({
+      apiKey: config.OPENAI_API_KEY,
+    });
+    this.openai = new OpenAIApi(this.configuration);
+  }
+  
+  async generateTaskBreakdown(task, userProfile) {
+    try {
+      const prompt = `
+        Divida a seguinte tarefa em etapas menores e mais gerenciáveis para uma pessoa com ${userProfile.neuroCondition}:
+        
+        Tarefa: ${task.title}
+        Descrição: ${task.description || 'Sem descrição'}
+        
+        Considere as seguintes características do usuário:
+        - Condição: ${userProfile.neuroCondition}
+        - Dificuldades: ${userProfile.difficulties.join(', ')}
+        - Preferências: ${userProfile.preferences.join(', ')}
+        
+        Forneça uma lista de subtarefas específicas, concretas e acionáveis.
+      `;
+      
+      const response = await this.openai.createCompletion({
+        model: 'text-davinci-003',
+        prompt,
+        max_tokens: 500,
+        temperature: 0.7,
+      });
+      
+      const subtasksText = response.data.choices[0].text.trim();
+      const subtasksList = this.parseSubtasks(subtasksText);
+      
+      return subtasksList;
+    } catch (error) {
+      console.error('Error generating task breakdown:', error);
+      throw new Error('Falha ao gerar divisão de tarefas');
+    }
+  }
+  
+  parseSubtasks(text) {
+    // Implementação da lógica de parsing
+    // ...
+  }
+}
+
+module.exports = new AIService();
+    </code></pre>
+    
+    <h2>Recursos para Desenvolvedores</h2>
+    
+    <ul>
+      <li><a href="https://github.com/alangomes/neurotrackapp">Repositório GitHub</a></li>
+      <li><a href="/api/index.html">Documentação da API</a></li>
+      <li><a href="/arquitetura/index.html">Arquitetura</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>NeurotrackApp - Organizando o caos com inteligência e empatia</p>
+      <p>Desenvolvido por Alan Gomes da Silva</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Medicação - NeurotrackApp Wiki</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>NeurotrackApp Wiki</h1>
+      <p>Documentação completa do NeurotrackApp - Organizando o caos com inteligência e empatia</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/casos-uso/index.html">Casos de Uso</a></li>
+        <li><a href="/arquitetura/index.html">Arquitetura</a></li>
+        <li><a href="/api/index.html">API</a></li>
+        <li><a href="/codigo/index.html">Código</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Gestão de Medicação</h1>
+
+    <p>O módulo de Gestão de Medicação do NeurotrackApp permite o gerenciamento de medicamentos e monitoramento de aderência, especialmente importante para pessoas neurodivergentes que utilizam medicação regular.</p>
+
+    <h2>Diagrama de Fluxo</h2>
+
+    <img src="/assets/images/gestao_medicacao_consolidado.png" alt="Gestão de Medicação">
+
+    <h2>Principais Funcionalidades</h2>
+
+    <h3>Cadastro de Medicamentos</h3>
+    <ul>
+      <li><strong>Registro detalhado</strong>: Nome, dosagem, frequência e instruções</li>
+      <li><strong>Categorização</strong>: Organização por tipo e finalidade</li>
+      <li><strong>Histórico médico</strong>: Registro de prescrições e alterações</li>
+    </ul>
+
+    <h3>Lembretes e Notificações</h3>
+    <ul>
+      <li><strong>Alertas personalizados</strong>: Notificações adaptadas ao perfil do usuário</li>
+      <li><strong>Lembretes contextuais</strong>: Avisos baseados em localização e rotina</li>
+      <li><strong>Confirmação de uso</strong>: Registro de medicações tomadas</li>
+    </ul>
+
+    <h3>Monitoramento e Análise</h3>
+    <ul>
+      <li><strong>Aderência ao tratamento</strong>: Acompanhamento da regularidade de uso</li>
+      <li><strong>Efeitos e reações</strong>: Registro de efeitos colaterais e eficácia</li>
+      <li><strong>Correlação com humor e comportamento</strong>: Análise de impacto da medicação</li>
+    </ul>
+
+    <h2>Endpoints da API</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Método</th>
+          <th>Endpoint</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GET</td>
+          <td>/medications</td>
+          <td>Listar medicações</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>/medications</td>
+          <td>Adicionar nova medicação</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/medications/{id}</td>
+          <td>Obter medicação específica</td>
+        </tr>
+        <tr>
+          <td>PUT</td>
+          <td>/medications/{id}</td>
+          <td>Atualizar medicação</td>
+        </tr>
+        <tr>
+          <td>DELETE</td>
+          <td>/medications/{id}</td>
+          <td>Excluir medicação</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>/medications/{id}/log</td>
+          <td>Registrar uso de medicação</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/medications/reminders</td>
+          <td>Obter lembretes de medicação</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>/medications/stats</td>
+          <td>Obter estatísticas de aderência</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Cenários de Uso</h2>
+
+    <h3>Cadastro de Nova Medicação</h3>
+    <ol>
+      <li>Usuário acessa a seção de medicações</li>
+      <li>Adiciona detalhes do medicamento (nome, dosagem, frequência)</li>
+      <li>Configura horários e instruções específicas</li>
+      <li>Define preferências de notificação</li>
+      <li>Salva o novo medicamento</li>
+    </ol>
+
+    <h3>Recebimento e Confirmação de Lembretes</h3>
+    <ol>
+      <li>Usuário recebe notificação no horário programado</li>
+      <li>Visualiza detalhes da medicação a ser tomada</li>
+      <li>Confirma a ingestão ou registra o motivo de não tomar</li>
+      <li>Opcionalmente registra observações sobre efeitos</li>
+    </ol>
+
+    <h3>Análise de Aderência e Efeitos</h3>
+    <ol>
+      <li>Usuário acessa relatório de medicações</li>
+      <li>Visualiza gráficos de aderência ao tratamento</li>
+      <li>Analisa correlações entre medicação e humor/comportamento</li>
+      <li>Exporta relatório para compartilhar com profissional de saúde</li>
+    </ol>
+
+    <p><a href="/casos-uso/index.html">Voltar para Casos de Uso</a></p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>NeurotrackApp - Organizando o caos com inteligência e empatia</p>
+      <p>Desenvolvido por Alan Gomes da Silva</p>
+    </div>
+  </footer>
+</body>
+</html>

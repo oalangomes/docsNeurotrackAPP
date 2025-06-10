@@ -1,0 +1,159 @@
+---
+layout: default
+title: NeurotrackApp Wiki
+---
+
+@import "{{ site.theme }}";
+
+/* Estilos personalizados para a wiki do NeurotrackApp */
+
+/* Cores principais */
+:root {
+  --primary-color: #4285f4;
+  --secondary-color: #34a853;
+  --accent-color: #fbbc05;
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --light-gray: #f5f5f5;
+  --border-color: #e0e0e0;
+}
+
+/* Estilos gerais */
+body {
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 2.2em;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.8em;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.2em;
+}
+
+/* Navegação principal */
+.main-nav {
+  background-color: var(--primary-color);
+  padding: 1em 0;
+  margin-bottom: 2em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav li {
+  margin: 0 1em;
+}
+
+.main-nav a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+  background-color: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+/* Tabelas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 0.5em 1em;
+}
+
+th {
+  background-color: var(--light-gray);
+  font-weight: 500;
+}
+
+tr:nth-child(even) {
+  background-color: var(--light-gray);
+}
+
+/* Imagens */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 1em 0;
+}
+
+/* Código */
+code, pre {
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--light-gray);
+  border-radius: 3px;
+}
+
+code {
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+}
+
+/* Rodapé */
+footer {
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-nav li {
+    margin: 0.5em 0;
+  }
+}
